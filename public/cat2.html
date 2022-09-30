@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="https://c.staticblitz.com/assets/css/preview-fe9dd8655d2ba.css">
+  <script src="https://c.staticblitz.com/assets/js/ext-cf348405c161a.js" crossorigin="anonymous"></script>
+  <script src="https://c.staticblitz.com/d/webcontainer.6170933061b95c32c65860b679b43685936f93c9.js" crossorigin="anonymous"></script>
+  <script src="https://c.staticblitz.com/assets/js/preview-2f24b398ecd0a.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Project</title>
+  <script src="https://kit.fontawesome.com/e339ffb317.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/product.css">
+  <link rel="stylesheet" href ="styles/cat1.css"
+
+</head>
+
+<body>
+  <section id="navigtion">
+
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <img src="images/icon.svg" class="logo">
+        <a class="navbar-brand" href="#">Brand</a>
+        <select name="cars" id="cars" class="location">
+          <option value="Egypt" class="active">Egypt</option>
+          <option>Assuitasdasd</option>
+          <option>Minya</option>
+          <option>Cairo</option>
+          <option>Sohag</option>
+        </select>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a href="#">
+                <i class="fa-sharp fa-solid fa-heart "></i>
+                <a class="nav-link active" aria-current="page" href="#">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="fa-solid fa-list "></i>
+                <a class="nav-link" href="#">My Ads</a>
+              </a>
+            </li>
+          </ul>
+
+          <a class="nav-link " id="login" onclick="document.getElementById('log').style.display='block'"> Login Or Sign Up</a>
+          <a class="nav-link " href="#"><button type="button" class="btn btn-primary btn-lg">Place your Ad</button> </a>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div id="log" class="modal">
+
+    <form class="modal-content animate" action="" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('log').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <h6>or</h6>
+        <button type="button" id="SignUp" onclick="document.getElementById('log').style.display='none';">Sign Up</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    </form>
+  </div>
+  <div id="sign" class="modal">
+
+    <form class="modal-content animate" action="" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="email"><b>email</b></label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit" id="SignUp2">Sign Up</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var modal = document.getElementById("log");
+    var modal2 = document.getElementById("sign");
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    function updateTextInput(val) {
+          document.getElementById("textInput").value=val;
+          document.getElementById("rangeInput").value=val;
+        }
+    document.getElementById("SignUp").onclick = function() {
+      modal.style.display = "none";
+      modal2.style.display = "block";
+    }
+  </script>
+  <div class="se">
+
+<form class="pagination" action="index.html" method="post">
+  <input type="text" placeholder="Search" class ="">
+  <button type="submit" name="button" class="btn btn-primary " >Search</button>
+</form>
+</div>
+<section id="categories">
+ <div class="row">
+
+ <div class="dropdown col-lg-3 col-sm-6">
+ <a href="images/car1.jpg">
+    <button class="dropbtn">cars</button>
+  </a>
+</div>
+
+<div class="dropdown col-lg-3 col-sm-6">
+  <a href="images/car1.jpg">
+ <button class="dropbtn">Electronic</button>
+ </a>
+</div>
+<div class="dropdown col-lg-3 col-sm-6 ">
+  <a href="images/car1.jpg">
+ <button class="dropbtn">Furniture</button>
+ </a>
+</div>
+ <div class="dropdown col-lg-3 col-sm-6 ">
+  <a href="images/car1.jpg">
+ <button class="dropbtn">Property</button>
+ </a>
+</div>
+</div>
+</section>
+<hr>
+<section class="prod">
+  <h1>
+    Furniture
+  </h1>
+  <h3>
+    filter
+  </h3>
+  <div class="filters">
+    <button type="button" class="navbar-toggler collapsed" name="button" data-bs-toggle="collapse" data-bs-target="#filter" aria-controls="filter" aria-expanded="false" aria-label="Toggle navigation">filter <i class="fa-solid fa-filter"></i> </button>
+    <label for="checkbox">Only with photo</label>
+  <input type="checkbox" onclick="alert('hello');" name="onCheck"/>
+ <span class="vertical"></span>
+ <label for="select"><b>Sort By</b></label>
+ <select name="sort" class="sort">
+   <option value="Newly list" class="active">Newly list</option>
+   <option>lowest price</option>
+   <option>Highest price</option>
+ </select>
+
+  </div>
+
+</section>
+<hr>
+<div class="row">
+  <div class="filter col-lg-4 col-sm-12 navbar-collapse collapse" id="filter">
+  <!-- <img src="images/car1.jpg" alt=""> -->
+  <div class="filter-element ">
+    <form class="filter-input" action="cat1.html" method="post">
+      <h5>city</h5>
+      <select name="city" class="sort2">
+        <option value="Egypt" class="active">Egypt</option>
+        <option>Assuit</option>
+        <option>Sohag</option>
+      </select>
+      <h5>
+        price
+      </h5>
+         <input type="number" name="min" placeholder="min">
+         <input type="number" name="max" placeholder="max">
+         <button type="submit" name="submit" class="btn btn-lg btn-outline-primary">save</button>
+         <button type="reset" name="reset" class="btn btn-lg btn-danger">revert</button>
+    </form>
+  </div>
+  </div>
+<section class="product-data col-lg-12 col-sm-12">
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a >
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+    <a href="product.html">
+  <div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="images/car2.webp" class="img-fluid rounded-start" alt="...">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#000;">75000$</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+</section>
+</div>
+<section class="pages">
+  <nav aria-label="Page navigation example">
+  <ul class="pagination pages-option">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+</section>
+<section id="footer" style="background-color:black;" >
+  <footer class="row  ">
+      <div class="col-sm-4 ">
+        <a  class="d-flex align-items-center mb-3 link-dark text-decoration-none"> </a>
+        <p class="text-muted">© 2022</p>
+        <i class="fa-brands fa-facebook icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-solid fa-envelope icon"></i>
+        <i class="fa-brands fa-square-whatsapp icon"></i>
+      </div>
+
+      <div class="col mb-3">
+
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+    </footer>
+</section>
+</body>
+</html>

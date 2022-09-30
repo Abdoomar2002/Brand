@@ -1,0 +1,341 @@
+<!-- addfsdf -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="https://c.staticblitz.com/assets/css/preview-fe9dd8655d2ba.css">
+  <script src="https://c.staticblitz.com/assets/js/ext-cf348405c161a.js" crossorigin="anonymous"></script>
+  <script src="https://c.staticblitz.com/d/webcontainer.6170933061b95c32c65860b679b43685936f93c9.js" crossorigin="anonymous"></script>
+  <script src="https://c.staticblitz.com/assets/js/preview-2f24b398ecd0a.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="../images/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Project</title>
+  <script src="https://kit.fontawesome.com/e339ffb317.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/product.css">
+
+</head>
+
+<body>
+  <section id="navigtion">
+
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <img src="../images/icon.svg" class="logo">
+        <a class="navbar-brand" href="#">Brand</a>
+        <select name="cars" id="cars" class="location">
+          <option value="Egypt" class="active">Egypt</option>
+          <option>Assuitasdasd</option>
+          <option>Minya</option>
+          <option>Cairo</option>
+          <option>Sohag</option>
+        </select>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a href="#">
+                <i class="fa-sharp fa-solid fa-heart "></i>
+                <a class="nav-link active" aria-current="page" href="#">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="fa-solid fa-list "></i>
+                <a class="nav-link" href="#">My Ads</a>
+              </a>
+            </li>
+          </ul>
+
+          <a class="nav-link " id="login" onclick="document.getElementById('log').style.display='block'"> Login Or Sign Up</a>
+          <a class="nav-link " href="#"><button type="button" class="btn btn-primary btn-lg">Place your Ad</button> </a>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div id="log" class="modal">
+
+    <form class="modal-content animate" action="" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('log').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <h6>or</h6>
+        <button type="button" id="SignUp" onclick="document.getElementById('log').style.display='none';">Sign Up</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    </form>
+  </div>
+  <div id="sign" class="modal">
+
+    <form class="modal-content animate" action="" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="email"><b>email</b></label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit" id="SignUp2">Sign Up</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var modal = document.getElementById("log");
+    var modal2 = document.getElementById("sign");
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    document.getElementById("SignUp").onclick = function() {
+      modal.style.display = "none";
+      modal2.style.display = "block";
+    }
+  </script>
+  <div class="se">
+
+<form class="pagination" action="index.html" method="post">
+  <input type="text" placeholder="Search" class ="">
+  <button type="submit" name="button" class="btn btn-primary " >Search</button>
+</form>
+</div>
+  <section id="categories">
+    <div class="row">
+    </div>
+    <div class="dropdown col-lg-3 col-sm-6">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown col-lg-3 col-sm-6">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown col-lg-3 col-sm-6 ">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="track" >
+    <div class="address">
+    <a href="#">country > </a>
+    <a href="#">categories > </a>
+    <a href="#">product > </a>
+    <a href="#">element </a>
+  </div>
+<div class="id-of-product ">
+  <p class="ref">Refrence Id: 98465494</p>
+</div>
+  </section>
+<section id="product">
+  <div class="row">
+
+  <div id="carouselExampleIndicators" class="carousel slide col-lg-6 col-sm-12" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <img src="../images/p1.jpg "data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active target" aria-current="true" aria-label="Slide 1">
+    <img src="../images/p2.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"class="target">
+    <img src="../images/p3.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-lable="Slide 5" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-lable="Slide 6" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-lable="Slide 7" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-lable="Slide 8" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-lable="Slide 9" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-lable="Slide 10" class="target">
+    <!-- <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target">
+    <img src="../images/p4.jpg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4" class="target"> -->
+
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/p1.jpg" class="d-block w-100 product-image" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/p2.jpg" class="d-block w-100 product-image" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/p3.jpg" class="d-block w-100 product-image" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/p4.jpg" class="d-block w-100 product-image" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/p4.jpg" class="d-block w-100 product-image" alt="...">
+    </div>  <div class="carousel-item">
+        <img src="../images/p4.jpg" class="d-block w-100 product-image" alt="...">
+      </div>  <div class="carousel-item">
+          <img src="../images/p4.jpg" class="d-block w-100 product-image" alt="...">
+        </div>  <div class="carousel-item">
+            <img src="../images/p4.jpg" class="d-block w-100 product-image" alt="...">
+          </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  <!-- <div class="card h-100"> -->
+    <!-- <img src="../images/car1.jpg" class="card-img-top" alt="..."> -->
+    <div class=" salary">
+      <h1 class=" price">75000$</h1>
+      <i class="fa-sharp fa-solid fa-heart p-icon" id="fav"></i>
+
+      <br>
+      <p class="">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <hr >
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+    <br>
+  </div>
+  <div class="details col-lg-6 col-sm-12">
+    <h1>
+  Seller Name
+    </h1>
+    <div class="describ">
+      <h3>
+        product name
+      </h3>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <button type="button" name="button" class ="btn btn-primary call">01XXXXXXXXX
+        Show the number
+      </button>
+      <button type="button" name="button" class ="btn btn-outline-primary call">call the seller</button >
+    </div>
+    <div class="props">
+<h3>
+  Details
+</h3>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+<p><strong>Detail Name:</strong> ghjk</p>
+    </div>
+    <h3>
+      Description
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <button type="button" name="button" class ="btn btn-primary call">01XXXXXXXXX
+      Show the number
+    </button>
+    <button type="button" name="button" class ="btn btn-outline-primary call">call the seller</button >
+
+  </div>
+
+</div>
+
+</div>
+</section>
+<section id="footer" style="background-color:black;" >
+  <footer class="row  ">
+      <div class="col-sm-4 ">
+        <a  class="d-flex align-items-center mb-3 link-dark text-decoration-none"> </a>
+        <p class="text-muted">© 2022</p>
+        <i class="fa-brands fa-facebook icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-solid fa-envelope icon"></i>
+        <i class="fa-brands fa-square-whatsapp icon"></i>
+      </div>
+
+      <div class="col mb-3">
+
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+    </footer>
+</section>
+</body>
+
+</html>
